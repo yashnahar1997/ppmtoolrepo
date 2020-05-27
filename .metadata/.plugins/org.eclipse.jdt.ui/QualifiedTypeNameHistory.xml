@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.yash.ppmtoolapi.domain.Backlog"/>
+<fullyQualifiedTypeName name="com.yash.ppmtoolapi.domain.ProjectTask"/>
+<fullyQualifiedTypeName name="com.yash.ppmtoolapi.repository.BacklogRepository"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseStatus"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+<fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.request.WebRequest"/>
+<fullyQualifiedTypeName name="com.yash.ppmtoolapi.exception.ProjectIdExceptionResponse"/>
+<fullyQualifiedTypeName name="com.yash.ppmtoolapi.exception.ProjectNotFoundException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>
