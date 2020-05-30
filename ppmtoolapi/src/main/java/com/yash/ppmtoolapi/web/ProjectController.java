@@ -26,34 +26,37 @@ public class ProjectController {
 
 	@Autowired
 	private ProjectService projectService;
-	
+
 	@Autowired
 	private MapValidationErrorService mapValidationErrorService;
-	
+
 	@PostMapping("")
-	public ResponseEntity<?> createNewProject(@Valid @RequestBody Project project,BindingResult result){
-		ResponseEntity<?> errorMap=mapValidationErrorService.mapValidationError(result);
-			if(errorMap!=null)
-				return errorMap;
-			
-		Project proj=projectService.saveOrUpdateProject(project);
-		return new ResponseEntity<Project>(proj,HttpStatus.CREATED);
+	public ResponseEntity<?> createNewProject(@Valid @RequestBody Project project, BindingResult result) {
+
+		ResponseEntity<?> errorMap = mapValidationErrorService.mapValidationError(result);
+		if (errorMap != null)
+			return errorMap;
+
+		Project proj = projectService.saveOrUpdateProject(project);
+		return new ResponseEntity<Project>(proj, HttpStatus.CREATED);
 	}
-	
+
 	@GetMapping("/{projectId}")
-	public ResponseEntity<?> getProjectById(@PathVariable String projectId){
-		Project project=projectService.findProjectByIdentifier(projectId);
-		return new ResponseEntity<Project>(project,HttpStatus.OK);
+	public ResponseEntity<?> getProjectById(@PathVariable String projectId) {
+		Project project = projectService.findProjectByIdentifier(projectId);
+		return new ResponseEntity<Project>(project, HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/all")
-	public Iterable<Project> getAllProjects(){
-		return projectService.findAllProjects();
+	public Iterable<Project> getAllProjects() {
+		return projectService.findAllProjcts();
 	}
-	
+
 	@DeleteMapping("/{projectId}")
-	public ResponseEntity<?> deleteProject(@PathVariable String projectId){
+	public ResponseEntity<?> deleteProject(@PathVariable String projectId) {
 		projectService.deleteProjectByIdentifier(projectId);
-		return new ResponseEntity<String>("Project wid ID'"+projectId+"' was deleted",HttpStatus.OK);
+
+		return new ResponseEntity<String>("Project with ID: '" + projectId + "' was deleted", HttpStatus.OK);
 	}
+
 }

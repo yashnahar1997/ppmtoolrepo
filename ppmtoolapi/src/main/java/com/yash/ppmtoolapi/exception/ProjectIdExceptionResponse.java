@@ -3,10 +3,10 @@ package com.yash.ppmtoolapi.exception;
 public class ProjectIdExceptionResponse {
 
 	private String projectIdentifier;
-	
+
 	public ProjectIdExceptionResponse(String projectIdentifier) {
 		super();
-		this.projectIdentifier=projectIdentifier;
+		this.projectIdentifier = projectIdentifier;
 	}
 
 	public String getProjectIdentifier() {

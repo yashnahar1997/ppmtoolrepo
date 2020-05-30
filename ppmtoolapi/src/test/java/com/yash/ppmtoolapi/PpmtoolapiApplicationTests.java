@@ -1,4 +1,4 @@
-package com.yash.ppmtoolapi1;
+package com.yash.ppmtoolapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

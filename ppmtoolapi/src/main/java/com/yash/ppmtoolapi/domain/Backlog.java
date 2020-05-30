@@ -24,6 +24,7 @@ public class Backlog {
 	private Integer PTSequence = 0;
 	private String projectIdentifier;
 
+	
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "project_id", nullable = false)
 	@JsonIgnore
